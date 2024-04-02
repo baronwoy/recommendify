@@ -29,4 +29,4 @@ clone the repository
 git clone https://github.com/baronwoy/Recommendify.git
 ```
 <br>
-and run in ur IDE of choice
+and run in your IDE of choice
