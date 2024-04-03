@@ -28,5 +28,15 @@ clone the repository
 ```
 git clone https://github.com/baronwoy/Recommendify.git
 ```
+1. Create a Spotify account and log into the [Spotify Developer Dashboard](https://developer.spotify.com). 
+2. Create an app from the dashboard and get the `Client ID`, `Client Secret` and enter in a `Redirect Uri`
+3. Create a .env file in the same folder as your python file and enter the details as shown below
+
+```properties
+SPOTIPY_CLIENT_ID = PASTE-YOUR-CLIENT-ID-HERE
+SPOTIPY_CLIENT_SECRET = PASTE-YOUR-CLIENT-SECRET-HERE
+SPOTIPY_REDIRECT_URI = PASTE-YOUR-REDIRECT-URI-HERE
+```
+4. Once run it will redirect you to the redirect uri, then just copy and paste the full url of the site you got redirected too and the program should run
 <br>
 and run in your IDE of choice
