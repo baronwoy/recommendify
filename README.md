@@ -26,7 +26,7 @@ pip install spotipy
 ```
 clone the repository
 ```
-git clone https://github.com/baronwoy/Recommendify.git
+git clone https://github.com/baronwoy/recommendify.git
 ```
 1. Create a Spotify account and log into the [Spotify Developer Dashboard](https://developer.spotify.com). 
 2. Create an app from the dashboard and get the `Client ID`, `Client Secret` and enter in a `Redirect Uri`
