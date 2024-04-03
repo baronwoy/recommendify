@@ -10,8 +10,8 @@
 [![My Skills](https://skillicons.dev/icons?i=py)](https://skillicons.dev) <br />
 Python
 
-* [`tkinter`](https://tkdocs.com/tutorial/index.html) framework for the GUI
-* [`spotipy`](https://spotipy.readthedocs.io/en/2.22.1/) framework for access to the Spotify API
+* [`tkinter`](https://tkdocs.com/tutorial/index.html) library for the GUI
+* [`spotipy`](https://spotipy.readthedocs.io/en/2.22.1/) library for access to the Spotify API
 
 ## Install
 based on the premise that a user would be using a Windows Operating System <br/>
