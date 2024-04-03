@@ -22,7 +22,7 @@ pip install tk
 ```
 install spotipy
 ```
-pip install spotipy --upgrade
+pip install spotipy
 ```
 clone the repository
 ```
