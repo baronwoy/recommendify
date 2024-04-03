@@ -42,4 +42,4 @@ SPOTIPY_CLIENT_ID = PASTE-YOUR-CLIENT-ID-HERE
 SPOTIPY_CLIENT_SECRET = PASTE-YOUR-CLIENT-SECRET-HERE
 SPOTIPY_REDIRECT_URI = PASTE-YOUR-REDIRECT-URI-HERE
 ```
-5. Once run it will redirect you to the redirect uri, then just copy and paste the full url of the site you got redirected to and the program should run
+5. Once ran it will redirect you to the redirect uri, then just copy and paste the full url of the site you got redirected to and the program should run
