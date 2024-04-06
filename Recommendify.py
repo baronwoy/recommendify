@@ -10,8 +10,9 @@ load_dotenv()
 
 # ~ Sets the main application window
 root = Tk()
-# ~ Sets the title of the application
+# ~ Sets the title and base size of the application
 root.title("Recommendify")
+root.geometry("1120x469")
 
 # ~ Placeholder to ensure tkinter is working
 ttk.Button(root, text="Hello World").grid()

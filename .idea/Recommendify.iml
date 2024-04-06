@@ -5,5 +5,9 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="cobing" />
+    <orderEntry type="module" module-name="jP" />
+    <orderEntry type="module" module-name="3" />
+    <orderEntry type="module" module-name="commbank" />
+    <orderEntry type="module" module-name="Minesweeper" />
   </component>
 </module>
