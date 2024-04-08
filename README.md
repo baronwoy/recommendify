@@ -4,7 +4,8 @@
  
 <img src="https://github.com/baronwoy/Recommendify/assets/157763277/c0606576-02a2-449e-a663-4461b4111407" width="750" height="314.06">
 
-Expected Output (Cover Art has yet to be implemented):
+My Output (Cover Art has yet to be implemented):
+<img src="https://github.com/baronwoy/recommendify/assets/157763277/ee281090-caf7-481f-a8d1-00914935af82">
 
 
 ### Built With
@@ -50,7 +51,8 @@ SPOTIPY_CLIENT_ID = PASTE-YOUR-CLIENT-ID-HERE
 SPOTIPY_CLIENT_SECRET = PASTE-YOUR-CLIENT-SECRET-HERE
 SPOTIPY_REDIRECT_URI = PASTE-YOUR-REDIRECT-URI-HERE
 ```
-5. Once ran it will redirect you to the redirect uri, then just copy and paste the full url of the site you got redirected to and the program should run
+5. Once ran it will redirect you to the redirect uri, then just copy and paste the full url of the site you got redirected to inside the console, rerun the program and it will run.
+6. it will ask you again to enter in another url when you attempt to generate playlists, do the same as above and the program will run
 
 ## Known Issues/Improvments
 * No cover art for songs shown yet
