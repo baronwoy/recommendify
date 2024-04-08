@@ -60,4 +60,5 @@ SPOTIPY_REDIRECT_URI = PASTE-YOUR-REDIRECT-URI-HERE
 * The recommendation functions can be made into one function called two times
 * The layout isn't uniform like the design
 * Since the recommendation class recommends songs artists that are present within the top 5 artists can come up as recommended artists
+* Some songs that are recommended are not available to listen to
   
