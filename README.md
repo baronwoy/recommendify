@@ -2,10 +2,11 @@
 ### Project Aim
  An app to scrape Spotify’s API to allow a user to view their most played songs and artists, view recommendations and create playlists based on recommendations. All with a functional UI based on the following design: <br>
  
-<img src="https://github.com/baronwoy/Recommendify/assets/157763277/c0606576-02a2-449e-a663-4461b4111407" width="750" height="314.06">
+<img src="https://github.com/baronwoy/Recommendify/assets/157763277/c0606576-02a2-449e-a663-4461b4111407" width="auto" height="auto">
 
-Expected Output (Cover Art has yet to be implemented):
-<img src="https://github.com/baronwoy/recommendify/assets/157763277/3a39dad9-e1aa-40f1-80d2-00d33a0addfe">
+My Output (Cover Art has yet to be implemented):
+<img src="https://github.com/baronwoy/recommendify/assets/157763277/ee281090-caf7-481f-a8d1-00914935af82" width="auto" height="auto">
+
 
 ### Built With
 
@@ -17,9 +18,9 @@ Python
   
 ## What it does
 * Displays a users Top 5 tracks and Top 5 artists of the past 12 months
-* Generates 2 series recommendations one based on a users top 5 tracks and one on a users top 5 artists
-* Generates a playlist putting together the top 5 tracks and the song recommendations
-* Generates a playlist putting together the top 5 artists most popular song and the recommendations
+* Generates 2 series of recommendations one based on a users top 5 tracks and one on a users top 5 artists
+* Generates a playlist collating together the top 5 tracks and the song recommendations
+* Generates a playlist collating together the top 5 artists most popular song and the recommendations
   
 ## Install
 based on the premise that a user would be using a Windows Operating System <br/>
@@ -50,11 +51,13 @@ SPOTIPY_CLIENT_ID = PASTE-YOUR-CLIENT-ID-HERE
 SPOTIPY_CLIENT_SECRET = PASTE-YOUR-CLIENT-SECRET-HERE
 SPOTIPY_REDIRECT_URI = PASTE-YOUR-REDIRECT-URI-HERE
 ```
-5. Once ran it will redirect you to the redirect uri, then just copy and paste the full url of the site you got redirected to and the program should run
+5. Once ran it will redirect you to the redirect uri, then just copy and paste the full url of the site you got redirected to inside the console, rerun the program and it will run.
+6. it will ask you again to enter in another url when you attempt to generate playlists, do the same as above and the program will run
 
 ## Known Issues/Improvments
 * No cover art for songs shown yet
-* Spotify's API can mess up and not provide an endpoint for Recommendations rendering the app useless
+* sometimes Spotify's API can mess up and not provide an endpoint for Recommendations rendering the app useless
 * The recommendation functions can be made into one function called two times
 * The layout isn't uniform like the design
+* Since the recommendation class recommends songs artists that are present within the top 5 artists can come up as recommended artists
   
