@@ -5,7 +5,7 @@
 <img src="https://github.com/baronwoy/Recommendify/assets/157763277/c0606576-02a2-449e-a663-4461b4111407" width="750" height="314.06">
 
 Expected Output (Cover Art has yet to be implemented):
-<img src="https://github.com/baronwoy/recommendify/assets/157763277/3a39dad9-e1aa-40f1-80d2-00d33a0addfe">
+
 
 ### Built With
 
@@ -57,4 +57,5 @@ SPOTIPY_REDIRECT_URI = PASTE-YOUR-REDIRECT-URI-HERE
 * Spotify's API can mess up and not provide an endpoint for Recommendations rendering the app useless
 * The recommendation functions can be made into one function called two times
 * The layout isn't uniform like the design
+* Since the recommendation class recommends songs artists that are present within the top 5 artists can come up as recommended artists
   
