@@ -1,5 +1,5 @@
 # Recommendify
-
+## PROJECT IS NOT FINISHED 
 ### Project Aim
  An app to scrape Spotify’s API to allow a user to view their most played songs and artists, view recommendations and create playlists based on recommendations. All with a functional UI based on the following design: <br>
  
