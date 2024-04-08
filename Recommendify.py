@@ -48,8 +48,8 @@ artistrecs['relief'] = 'raised'
 # ~ Labels of text
 ttk.Label(mainframe, text='Top 5 Songs of the past 12 months').grid(column=1, row=1, sticky=(W, S))
 ttk.Label(mainframe, text='Top 5 Artists of the past 12 months').grid(column=6, row=1, sticky=(W, S))
-ttk.Label(mainframe, text='5 Song Recommendations').grid(column=1, row=5, sticky=(W, S))
-ttk.Label(mainframe, text='5 Artist Recommendations').grid(column=6, row=5, sticky=(W, S))
+ttk.Label(mainframe, text='5 Song Recommendations').grid(column=1, row=3, sticky=(W, S))
+ttk.Label(mainframe, text='5 Artist Recommendations').grid(column=6, row=3, sticky=(W, S))
 
 # ~ function to get a users top 5 tracks of the past 12 months
 def top5tracks():
@@ -79,7 +79,7 @@ def top5artists():
         # ~ iterates through the dictionary and shows the artist's name
         for i, item in enumerate(artistresults['items']):
             artistname = (str(i+1) + ". " + item['name'])
-            ttk.Label(topartist, text=artistname).grid(column=i + 1, row=1, sticky=(S))
+            ttk.Label(topartist, text=artistname).grid(column=i + 1, row=1, sticky=(W))
     return artistresults
 
 
@@ -98,7 +98,7 @@ def songrecommendations(songresults):
     # ~ displays the 5 song recommendations
     for i in range(5):
         recs = (str(i + 1) + ". " + srecresults['tracks'][i]['name'])
-        ttk.Label(songrecs, text=recs).grid(column=i+1, row=1, sticky=(N))
+        ttk.Label(songrecs, text=recs).grid(column=i+1, row=1, sticky=(W))
     return srecresults
 
 # ~ function to get artist recommendations based on a users top 5 artists
@@ -114,7 +114,7 @@ def artistrecommendations(artistresults):
     # ~ displays the artists of the song recommendations found
     for i in range(5):
         recs = (str(i + 1) + ". " + results['tracks'][i]['artists'][0]['name'])
-        ttk.Label(artistrecs, text=recs).grid(column=i + 1, row=1, sticky=(N))
+        ttk.Label(artistrecs, text=recs).grid(column=i + 1, row=1, sticky=(W))
     return results
 
 # ~ function to place the top 5 songs and the recommendations' ids into an array
