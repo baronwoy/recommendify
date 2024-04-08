@@ -4,8 +4,6 @@ from tkinter import ttk
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 from dotenv import load_dotenv
-from urllib.request import urlopen
-from PIL import Image, ImageTk
 from playlist import playlistsongs, playlistartists
 
 # ~ gets local environment files for CLIENT ID, CLIENT SECRET and REDIRECT URI
@@ -36,6 +34,15 @@ topartist = ttk.Frame(mainframe, padding='3 3 12 12')
 topartist.grid(column=6, row=2)
 topartist['borderwidth'] = 2
 topartist['relief'] = 'raised'
+songrecs = ttk.Frame(mainframe, padding='3 3 12 12')
+songrecs.grid(column=1, row=4)
+songrecs['borderwidth'] = 2
+songrecs['relief'] = 'raised'
+artistrecs = ttk.Frame(mainframe, padding='3 3 12 12')
+artistrecs.grid(column=6, row=4)
+artistrecs['borderwidth'] = 2
+artistrecs['relief'] = 'raised'
+
 
 
 # ~ Labels of text
@@ -43,11 +50,6 @@ ttk.Label(mainframe, text='Top 5 Songs of the past 12 months').grid(column=1, ro
 ttk.Label(mainframe, text='Top 5 Artists of the past 12 months').grid(column=6, row=1, sticky=(W, S))
 ttk.Label(mainframe, text='5 Song Recommendations').grid(column=1, row=5, sticky=(W, S))
 ttk.Label(mainframe, text='5 Artist Recommendations').grid(column=6, row=5, sticky=(W, S))
-
-
-# ~ Buttons
-ttk.Button(mainframe, text='Generate Playlist on Songs', command=playlistsongs).grid(column=1, row=6, sticky=(W, E))
-ttk.Button(mainframe, text='Generate Playlist on Artists', command=playlistartists).grid(column=6, row=6, sticky=(W, E))
 
 # ~ function to get a users top 5 tracks of the past 12 months
 def top5tracks():
@@ -60,10 +62,10 @@ def top5tracks():
         # ~ iterates through the dictionary and shows the name of the song and the artist's name
         for i, item in enumerate(songresults['items']):
             # ~ item['album']['images'][0]['url']) will implement image functionality at a later date
-            songname = (str(i + 1) + " "+ item['name'])
+            songname = (str(i + 1) + ". " + item['name'])
             artistname = item['artists'][0]['name']
-            ttk.Label(topsongs, text=songname).grid(column=i+1, row=3, sticky=(W))
-            ttk.Label(topsongs, text=artistname ).grid(column=i+1, row=4, sticky=(W))
+            ttk.Label(topsongs, text=songname).grid(column=i+1, row=1, sticky=(W))
+            ttk.Label(topsongs, text=artistname ).grid(column=i+1, row=2, sticky=(W))
     return songresults
 
 # ~ function to get the top 5 artists of a user
@@ -76,8 +78,8 @@ def top5artists():
 
         # ~ iterates through the dictionary and shows the artist's name
         for i, item in enumerate(artistresults['items']):
-            artistname = (str(i+1) + " "+ item['name'])
-            ttk.Label(topartist, text=artistname).grid(column=i + 1, row=3, sticky=(S))
+            artistname = (str(i+1) + ". " + item['name'])
+            ttk.Label(topartist, text=artistname).grid(column=i + 1, row=1, sticky=(S))
     return artistresults
 
 
@@ -96,7 +98,7 @@ def songrecommendations(songresults):
     # ~ displays the 5 song recommendations
     for i in range(5):
         recs = srecresults['tracks'][i]['name']
-        ttk.Label(mainframe, text=recs).grid(column=i+1, row=6, sticky=(N))
+        ttk.Label(songrecs, text=recs).grid(column=i+1, row=1, sticky=(N))
     return srecresults
 
 # ~ function to get artist recommendations based on a users top 5 artists
@@ -112,7 +114,7 @@ def artistrecommendations(artistresults):
     # ~ displays the artists of the song recommendations found
     for i in range(5):
         recs = results['tracks'][i]['artists'][0]['name']
-        ttk.Label(mainframe, text=recs).grid(column=i + 6, row=6, sticky=(N))
+        ttk.Label(artistrecs, text=recs).grid(column=i + 1, row=1, sticky=(N))
     return results
 
 # ~ function to place the top 5 songs and the recommendations' ids into an array
@@ -156,6 +158,8 @@ def playlistartists(artsongids):
     pl = playlists['items'][0]
     sp.playlist_add_items(pl['id'], artsongids)
 
+
+
 # ~ run the program
 def main():
     sresults = top5tracks()
@@ -165,12 +169,10 @@ def main():
     songids = collatesongs(sresults, srecresults)
     mostpopsong = top5artistsmostpopularsong(aresults)
     artsongids = collateartists(mostpopsong, arecresults)
-    playlistsongs(songids)
-    playlistartists(artsongids)
-#main()
-
-top5tracks()
-top5artists()
+    # ~ Buttons
+    ttk.Button(mainframe, text='Generate Playlist on Songs', command=lambda: playlistsongs(songids)).grid(column=1,row=6, sticky=(W, E))
+    ttk.Button(mainframe, text='Generate Playlist on Artists', command=lambda: playlistartists(artsongids)).grid(column=6, row=6, sticky=(W, E))
+main()
 
 # ~ Adds padding to all the widgets
 for child in mainframe.winfo_children():
