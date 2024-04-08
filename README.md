@@ -11,7 +11,13 @@ Python
 
 * [`tkinter`](https://tkdocs.com/tutorial/index.html) library for the GUI
 * [`spotipy`](https://spotipy.readthedocs.io/en/2.22.1/) library for access to the Spotify API
-
+  
+## What it does
+* Displays a users Top 5 tracks and Top 5 artists of the past 12 months
+* Generates 2 series recommendations one based on a users top 5 tracks and one on a users top 5 artists
+* Generates a playlist putting together the top 5 tracks and the song recommendations
+* Generates a playlist putting together the top 5 artists most popular song and the recommendations
+  
 ## Install
 based on the premise that a user would be using a Windows Operating System <br/>
 
