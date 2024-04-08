@@ -46,4 +46,5 @@ SPOTIPY_REDIRECT_URI = PASTE-YOUR-REDIRECT-URI-HERE
 ## Known Issues/Improvments
 * No cover art for songs shown yet
 * Spotify's API can mess up and not provide an endpoint for Recommendations rendering the app useless
+* The recommendation functions can be made into one function called two times
   
