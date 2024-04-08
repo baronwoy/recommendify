@@ -98,7 +98,9 @@ def songrecommendations(songresults):
     # ~ displays the 5 song recommendations
     for i in range(5):
         recs = (str(i + 1) + ". " + srecresults['tracks'][i]['name'])
+        artistname = srecresults['tracks'][i]['artists'][0]['name']
         ttk.Label(songrecs, text=recs).grid(column=i+1, row=1, sticky=(W))
+        ttk.Label(songrecs, text=artistname).grid(column=i + 1, row=2, sticky=(W))
     return srecresults
 
 # ~ function to get artist recommendations based on a users top 5 artists
