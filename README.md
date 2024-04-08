@@ -5,7 +5,7 @@
 <img src="https://github.com/baronwoy/Recommendify/assets/157763277/c0606576-02a2-449e-a663-4461b4111407" width="750" height="314.06">
 
 My Output (Cover Art has yet to be implemented):
-<img src="https://github.com/baronwoy/recommendify/assets/157763277/ee281090-caf7-481f-a8d1-00914935af82">
+<img src="https://github.com/baronwoy/recommendify/assets/157763277/ee281090-caf7-481f-a8d1-00914935af82" width="1000" height="250">
 
 
 ### Built With
