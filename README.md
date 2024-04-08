@@ -2,10 +2,10 @@
 ### Project Aim
  An app to scrape Spotify’s API to allow a user to view their most played songs and artists, view recommendations and create playlists based on recommendations. All with a functional UI based on the following design: <br>
  
-<img src="https://github.com/baronwoy/Recommendify/assets/157763277/c0606576-02a2-449e-a663-4461b4111407" width="auto" height="auto">
+<img src="https://github.com/baronwoy/Recommendify/assets/157763277/c0606576-02a2-449e-a663-4461b4111407" width="750" height="auto">
 
 My Output (Cover Art has yet to be implemented):
-<img src="https://github.com/baronwoy/recommendify/assets/157763277/ee281090-caf7-481f-a8d1-00914935af82" width="auto" height="auto">
+<img src="https://github.com/baronwoy/recommendify/assets/157763277/ee281090-caf7-481f-a8d1-00914935af82" width="750" height="auto">
 
 
 ### Built With
