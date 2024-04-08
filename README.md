@@ -1,5 +1,4 @@
 # Recommendify
-## PROJECT IS NOT FINISHED 
 ### Project Aim
  An app to scrape Spotify’s API to allow a user to view their most played songs and artists, view recommendations and create playlists based on recommendations. All with a functional UI based on the following design: <br>
  
@@ -43,3 +42,8 @@ SPOTIPY_CLIENT_SECRET = PASTE-YOUR-CLIENT-SECRET-HERE
 SPOTIPY_REDIRECT_URI = PASTE-YOUR-REDIRECT-URI-HERE
 ```
 5. Once ran it will redirect you to the redirect uri, then just copy and paste the full url of the site you got redirected to and the program should run
+
+## Known Issues/Improvments
+* No cover art for songs shown yet
+* Spotify's API can mess up and not provide an endpoint for Recommendations rendering the app useless
+  
