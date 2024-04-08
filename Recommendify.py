@@ -17,7 +17,7 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope))
 root = Tk()
 # ~ Sets the title and base size of the application
 root.title("Recommendify")
-root.geometry("1280x720")
+root.geometry("1000x250")
 
 # ~ Sets the main frame of the application
 mainframe = ttk.Frame(root, padding='3 3 12 12')
@@ -97,7 +97,7 @@ def songrecommendations(songresults):
 
     # ~ displays the 5 song recommendations
     for i in range(5):
-        recs = srecresults['tracks'][i]['name']
+        recs = (str(i + 1) + ". " + srecresults['tracks'][i]['name'])
         ttk.Label(songrecs, text=recs).grid(column=i+1, row=1, sticky=(N))
     return srecresults
 
@@ -113,7 +113,7 @@ def artistrecommendations(artistresults):
 
     # ~ displays the artists of the song recommendations found
     for i in range(5):
-        recs = results['tracks'][i]['artists'][0]['name']
+        recs = (str(i + 1) + ". " + results['tracks'][i]['artists'][0]['name'])
         ttk.Label(artistrecs, text=recs).grid(column=i + 1, row=1, sticky=(N))
     return results
 
@@ -144,6 +144,8 @@ def collateartists(response, results):
 
 # ~ creates a playlist and adds the top 5 songs and recommendations to a playlist
 def playlistsongs(songids):
+    scope = 'playlist-modify-public'
+    sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope))
     user = sp.current_user()
     sp.user_playlist_create(user=user['id'],name='Song Recommendations', description='Recommendation from Recommendify service')
     playlists = sp.user_playlists(user=user['id'])
@@ -152,6 +154,8 @@ def playlistsongs(songids):
 
 # ~ creates a playlist and adds the top 5 artists most popular songs and recommendations to a playlist
 def playlistartists(artsongids):
+    scope = 'playlist-modify-public'
+    sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope))
     user = sp.current_user()
     sp.user_playlist_create(user=user['id'],name='Artist Song Recommendations', description='Recommendation from Recommendify service')
     playlists = sp.user_playlists(user=user['id'])
