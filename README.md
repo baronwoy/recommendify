@@ -4,6 +4,9 @@
  
 <img src="https://github.com/baronwoy/Recommendify/assets/157763277/c0606576-02a2-449e-a663-4461b4111407" width="750" height="314.06">
 
+Expected Output (Cover Art has yet to be implemented):
+<img src="https://github.com/baronwoy/recommendify/assets/157763277/3a39dad9-e1aa-40f1-80d2-00d33a0addfe">
+
 ### Built With
 
 [![My Skills](https://skillicons.dev/icons?i=py)](https://skillicons.dev) <br />
