@@ -54,7 +54,7 @@ SPOTIPY_REDIRECT_URI = PASTE-YOUR-REDIRECT-URI-HERE
 5. Once ran it will redirect you to the redirect uri, then just copy and paste the full url of the site you got redirected to inside the console, rerun the program and it will run.
 6. it will ask you again to enter in another url when you attempt to generate playlists, do the same as above and the program will run
 
-## Known Issues/Improvments
+## Known Issues
 * No cover art for songs shown yet
 * sometimes Spotify's API can mess up and not provide an endpoint for Recommendations rendering the app useless
 * The recommendation functions can be made into one function called two times
